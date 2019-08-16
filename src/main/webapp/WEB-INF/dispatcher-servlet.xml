@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>									<!-- NEED TO REMOVE SCHEMA "p". IT IS NOT PRESENT / 404 FOR THIS URL -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<mvc:annotation-driven />
+
+	<context:component-scan
+		base-package="com.testyantra.empspringmvc" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="configLocations"
+			value="classpath:hibernate.cfg.xml"></property>
+		<property name="packagesToScan"
+			value="com.testyantra.empspringmvc.jaxb.beans"></property>
+	</bean>
+	<!-- <bean id="xmlViewer"
+		class="org.springframework.web.servlet.view.xml.MarshallingView">
+		<constructor-arg>
+			<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+				<property name="classesToBeBound">
+					<list>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeInfoBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.DepartmentInfoBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeAddressInfoBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeAddressPKBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeEducationInfoBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeEducationPKBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeExperinceInfoBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeExperincePKBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.EmployeeOtherInfoBean
+						</value>
+						<value>com.testyantra.empspringmvc.jaxb.beans.TrainingInfoBean
+						</value>
+					</list>
+				</property>
+				<property name="packagesToScan">
+					<list>
+						<value>com.testyantra.empspringmvc.jaxb.beans</value>
+					</list>
+				</property>
+				<property name="marshallerProperties">
+					<map>
+						<entry>
+							<key>jaxb.formatted.output</key>
+							<value>true</value>
+						</entry>
+					</map>
+				</property>
+			</bean>
+		</constructor-arg>
+	</bean> -->
+</beans>

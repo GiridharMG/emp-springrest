@@ -1,0 +1,7 @@
+<root>
+  <facet id="jpt.jaxb">
+    <node name="classgen">
+      <attribute name="package" value="com.testyantra.empspringmvc.jaxb.beans.classes"/>
+    </node>
+  </facet>
+</root>
