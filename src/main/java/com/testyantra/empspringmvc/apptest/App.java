@@ -1,7 +1,5 @@
 package com.testyantra.empspringmvc.apptest;
 
-import java.util.Arrays;
-
 import com.testyantra.empspringmvc.dao.EmployeeDAOHibernateImpl;
 import com.testyantra.empspringmvc.jaxb.beans.EmployeeAddressInfoBean;
 import com.testyantra.empspringmvc.jaxb.beans.EmployeeAddressPKBean;
